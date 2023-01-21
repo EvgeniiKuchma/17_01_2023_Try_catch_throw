@@ -11,12 +11,12 @@ public:
 		std::unordered_map<int, int> keyAutom;
 		for (size_t i = 0; i < _key.size(); i++)
 		{
-			const auto&  [it, isInserted] = keyAutom.insert({ _key[i], 1 });//достаем из вектора ключ пытаемся вставить в мап. в [it, isInsert] возвращает функция insert <указатель на элемент который мешает сделать инсерт, bool значение удалось вставить или нет>
+			const auto&  [it, isInserted] = keyAutom.insert({ _key[i], 1 });//РґРѕСЃС‚Р°РµРј РёР· РІРµРєС‚РѕСЂР° РєР»СЋС‡ РїС‹С‚Р°РµРјСЃСЏ РІСЃС‚Р°РІРёС‚СЊ РІ РјР°Рї. РІ [it, isInsert] РІРѕР·РІСЂР°С‰Р°РµС‚ С„СѓРЅРєС†РёСЏ insert <СѓРєР°Р·Р°С‚РµР»СЊ РЅР° СЌР»РµРјРµРЅС‚ РєРѕС‚РѕСЂС‹Р№ РјРµС€Р°РµС‚ СЃРґРµР»Р°С‚СЊ РёРЅСЃРµСЂС‚, bool Р·РЅР°С‡РµРЅРёРµ СѓРґР°Р»РѕСЃСЊ РІСЃС‚Р°РІРёС‚СЊ РёР»Рё РЅРµС‚>
 			if (!isInserted)
 			{
 				auto value = it->second;
 				value++;
-				keyAutom[_key[i]] = value;//обращаемся через квадратные скобки так как фунция insert({}) не позволит вставить  а [] гарантированно вставят значения
+				keyAutom[_key[i]] = value;//РѕР±СЂР°С‰Р°РµРјСЃСЏ С‡РµСЂРµР· РєРІР°РґСЂР°С‚РЅС‹Рµ СЃРєРѕР±РєРё С‚Р°Рє РєР°Рє С„СѓРЅС†РёСЏ insert({}) РЅРµ РїРѕР·РІРѕР»РёС‚ РІСЃС‚Р°РІРёС‚СЊ  Р° [] РіР°СЂР°РЅС‚РёСЂРѕРІР°РЅРЅРѕ РІСЃС‚Р°РІСЏС‚ Р·РЅР°С‡РµРЅРёСЏ
 			}
 		}
 		std::pair<int, int> key_biggestValue = { 0,0 };
@@ -54,7 +54,7 @@ int main()
 	//const auto& [a, b, c, d] = t;
 	//std::tuple <int, int, double> t2;
 	//std::cout << a << ' ' << b << ' ' << c << ' ' << d << '\n';
-	//std::cout << std::get<0>(t) << std::endl;//обращение к 0 элементу
+	//std::cout << std::get<0>(t) << std::endl;//РѕР±СЂР°С‰РµРЅРёРµ Рє 0 СЌР»РµРјРµРЅС‚Сѓ
 
 	//std::vector<std::tuple<int, double, std::string>> vec;
 	//vec.push_back({ 1, 2.5, "bob" });
@@ -77,7 +77,7 @@ int main()
 	//}
 	//catch (const char* msg)
 	//{
-	//std::cerr << msg << std::endl;//дискриптор 
+	//std::cerr << msg << std::endl;//РґРёСЃРєСЂРёРїС‚РѕСЂ 
 	//}
 	//catch (...)//cath all  - bad practice
 	//{
@@ -87,7 +87,7 @@ int main()
 	//std::vector<int> v{ 1,2,3,4,5 };
 	//try
 	//{
-	//	int z = v.at(10);//v[10] untifire beheviar неопределенное поведение - UB
+	//	int z = v.at(10);//v[10] untifire beheviar РЅРµРѕРїСЂРµРґРµР»РµРЅРЅРѕРµ РїРѕРІРµРґРµРЅРёРµ - UB
 	//}
 	//catch (const std::out_of_range& e)
 	//{
